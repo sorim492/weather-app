@@ -6,7 +6,7 @@ export default function Footer() {
       <p>
         This page was{" "}
         <a
-          href="https://github.com/sorim492/Weather-react-app.git"
+          href="https://github.com/sorim492/weather-app.git"
           target="_blank"
           rel="noreferrer"
         >
