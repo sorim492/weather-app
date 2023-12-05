@@ -1,0 +1,160 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container {
+  background-color: #00bcf09a;
+  border: 1px solid #00204a;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: auto;
+  width: 800px;
+}
+
+.search input {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+#submitButton {
+  background-color: #fdb44b;
+}
+
+.currentButton button {
+  background-color: #00204a;
+  border-radius: 10px;
+  color: #fff;
+  display: block;
+  margin: 0 10px;
+}
+
+.principal {
+  margin: 10px 15px;
+}
+
+.city h1 {
+  font-weight: 900;
+  color: #005792;
+}
+
+.city h2 {
+  font-weight: 400;
+  font-size: 20px;
+  color: #385170;
+}
+
+.city h3 {
+  font-weight: 300;
+  font-size: 20px;
+  color: #455d7a;
+}
+
+.data h2 {
+  text-align: center;
+  display: inline;
+  font-size: 45px;
+}
+
+.data a {
+  font-size: 16px;
+  position: relative;
+  top: -20px;
+}
+
+.data .active {
+  color: #000;
+}
+
+.data .active:hover {
+  text-decoration: none;
+}
+
+.card {
+  background-color: #f8f6f1;
+  border-radius: 30px;
+}
+
+.forecast {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.forecast h2 {
+  text-align: center;
+  padding: 10px;
+  font-weight: 800;
+}
+
+.forecast h3 {
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.forecast i {
+  margin-left: 35px;
+  padding: 5px;
+  color: rgb(228, 196, 11);
+  font-size: 25px;
+}
+
+.forecast p {
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  left: 450px;
+  font-weight: 200;
+}
+
+/* Dark theme */
+.dark {
+  background-color: #455d7a;
+}
+
+.dark .container {
+  background-color: #385170;
+  color: aliceblue;
+}
+
+.dark h1 h2 h3 {
+  color: #d0cece;
+}
+
+.dark .city h1 {
+  color: #eae8e8;
+}
+
+.dark .city h2 {
+  color: #eae8e8;
+}
+
+.dark #country {
+  color: #adaaaa;
+}
+
+.dark #actual {
+  color: #a09f9f;
+}
+
+.dark #description {
+  color: #716e6e;
+}
+
+.dark #submitButton {
+  color: #fdb44b;
+  background-color: #000;
+}
+
+.dark .card {
+  background-color: #41454a7d;
+}
+
+.dark a {
+  color: #adaaaa;
+}
