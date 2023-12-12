@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Search() {
+export default function Weather() {
   let [city, setCity] = useState(" ");
 
   function handleSubmit(event) {
