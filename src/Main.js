@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Weather from "./Weather";
 
 function Main(props) {
   let [temperature, setTemperature] = useState(props.temperature);
@@ -39,7 +38,6 @@ function Main(props) {
               <div className="card-body">
                 <span className="data">
                   <img src="" alt={props.description} />
-                  <Weather city="paris" />
                   <h2 className="tempetature">{temperature}</h2>
                   <a href="/" onClick={convertToCelsius} className="active">
                     {" "}

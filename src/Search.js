@@ -19,6 +19,8 @@ export default function Search() {
   function showTemperature(response) {
     console.log(response.data);
     setWeather({
+      city: response.data.name,
+      country: response.data.sys.country,  
       temperature: response.data.main.temp,
       feels: response.data.main.feels_like,
       humidity: response.data.main.humidity,
@@ -26,6 +28,19 @@ export default function Search() {
       description: response.data.weather[0].description,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     });
+  }
+
+  let [temperature, setTemperature] = useState(weather.temperature);
+
+  function convertToFahrenheit(event) {
+    event.preventDefault();
+    let fTemperature = (weather.temperature * 9) / 5 + 32;
+    return setTemperature(Math.round(fTemperature));
+  }
+
+  function convertToCelsius(event) {
+    event.preventDefault();
+    setTemperature(weather.temperature);
   }
 
   let form = (
@@ -38,13 +53,45 @@ export default function Search() {
   return (
     <div>
       {form}
-      <h4>{city}</h4>
-      <h4>{Math.round(weather.temperature)}</h4>
-      <h4>Feels like: {weather.feels}</h4>
-      <h4>{weather.description}</h4>
-      <h4>{weather.humidity} %</h4>
-      <h4>{weather.wind} km/h</h4>
-      <img src={weather.icon} alt={weather.description} />
+      <br/>
+    <div className="principal">
+        <div className="row">
+            <div className="col-7">
+                <div className="card">
+                    <div className="card-body">
+                        <div className="city">
+                            <h3>{weather.city}</h3>
+                            <h4>{weather.country}</h4>
+                            <h4>{weather.description}</h4>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div className="col-5">
+                <div className="card">
+                    <div className="card-body">
+                        <span className="data">
+                            <img src={weather.icon} alt={weather.description} />
+                            <br/>
+                            <h2>{Math.round(temperature)}</h2>
+                            <a href="/" onClick={convertToCelsius} className="active">
+                                {" "}
+                                °C |
+                            </a>
+                            <a href="/" onClick={convertToFahrenheit}>
+                                {" "}
+                                ºF
+                            </a>
+      <h4>Feels like: {Math.round(weather.feels)} °C</h4>
+      <h4>Humidity: {weather.humidity} %</h4>
+      <h4>Wind: {weather.wind} km/hr</h4>
+      </span>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
     </div>
   );
 }
