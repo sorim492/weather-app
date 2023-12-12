@@ -4,15 +4,15 @@ export default function Footer() {
   return (
     <div className="footer">
       <p>
-        This page was{" "}
+        This page is{" "}
         <a
           href="https://github.com/sorim492/weather-app.git"
           target="_blank"
           rel="noreferrer"
         >
-          Coded
+          open-sourced on Github
         </a>{" "}
-        by{" "}
+        Coded by{" "}
         <a href="https://www.kairosquin.com/" target="_blank" rel="noreferrer">
           Miros Quin
         </a>{" "}
