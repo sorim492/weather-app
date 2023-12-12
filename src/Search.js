@@ -82,16 +82,15 @@ export default function Search() {
                                 {" "}
                                 ºF
                             </a>
-      <h4>Feels like: {Math.round(weather.feels)} °C</h4>
-      <h4>Humidity: {weather.humidity} %</h4>
-      <h4>Wind: {weather.wind} km/hr</h4>
-      </span>
-      </div>
-      </div>
-      </div>
-      </div>
-
-      </div>
+                            <h4>Feels like: {Math.round(weather.feels)} °C</h4>
+                            <h4>Humidity: {weather.humidity} %</h4>
+                            <h4>Wind: {weather.wind} km/hr</h4>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
   );
 }
