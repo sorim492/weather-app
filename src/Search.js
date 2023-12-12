@@ -60,9 +60,9 @@ export default function Search() {
                 <div className="card">
                     <div className="card-body">
                         <div className="city">
-                            <h3>{weather.city}</h3>
-                            <h4>{weather.country}</h4>
-                            <h4>{weather.description}</h4>
+                            <h3>City: {weather.city}</h3>
+                            <h4>Country: {weather.country}</h4>
+                            <h4>Description: {weather.description}</h4>
                         </div>
                     </div>
                 </div> 
