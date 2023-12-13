@@ -6,7 +6,9 @@ export default function Weather() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=de2c40e370d58e257faf07ba4ea95840&units=metric`;
+    let apiKey ="de2c40e370d58e257faf07ba4ea95840";
+    let units = "metric";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(url).then(showTemperature);
   }
 
