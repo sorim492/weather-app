@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormatedDate from './FormatedDate';
 
 export default function Weather() {
   let [city, setCity] = useState(" ");
@@ -22,6 +23,7 @@ export default function Weather() {
     console.log(response.data);
     setWeather({
       city: response.data.name,
+      date: response.data.dt,
       country: response.data.sys.country,  
       temperature: response.data.main.temp,
       feels: response.data.main.feels_like,
@@ -64,6 +66,7 @@ export default function Weather() {
                         <div className="city">
                             <h3>City: {weather.city}</h3>
                             <h4>Country: {weather.country}</h4>
+                            <FormatedDate date={weather.date}/>
                             <h4 className="text-capitalize">Description: {weather.description}</h4>
                         </div>
                     </div>
