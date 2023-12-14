@@ -2,8 +2,12 @@ import React from "react";
 
 
 export default function Header() {
+
+
   function changeTheme(){
-    alert("black")
+    alert("black");
+    
+    
   }
 
   return (
