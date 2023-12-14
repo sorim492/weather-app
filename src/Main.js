@@ -38,9 +38,6 @@ function Main(props) {
             </div>
         </div>
       </div>
-    <div className="currentButton">
-      <button>Current Location</button>
-    </div>
   </div>
   );
 }
