@@ -1,5 +1,6 @@
 import React from "react";
 import FormatedDate from './FormatedDate';
+import WeatherTemp from "./WeatherTemp";
 
 function Main(props) {
   return (
@@ -27,15 +28,8 @@ function Main(props) {
                         <span className="data">
                             <img src={props.data.icon} alt={props.data.description} />
                             <br/>
-                            <h2>{Math.round(props.data.temperature)}</h2>
-                            <a href="/"  className="active">
-                                {" "}
-                                °C |
-                            </a>
-                            <a href="/">
-                                {" "}
-                                ºF
-                            </a>
+                            <WeatherTemp celsius={props.data.temperature}/>
+                            
                             <h4>Feels like: {Math.round(props.data.feels)} °C</h4>
                             <h4>Humidity: {props.data.humidity} %</h4>
                             <h4>Wind: {props.data.wind} km/hr</h4>
