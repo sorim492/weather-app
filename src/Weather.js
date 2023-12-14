@@ -65,9 +65,12 @@ export default function Weather() {
                     <div className="card-body">
                         <div className="city">
                             <h3>City: {weather.city}</h3>
+                            <br/>
                             <h4>Country: {weather.country}</h4>
+                            <br/>
                             <FormatedDate date={weather.date}/>
-                            <h4 className="text-capitalize">Description: {weather.description}</h4>
+                            <br/>
+                            <h4 className="text-capitalize">Description: <br/> {weather.description}</h4>
                         </div>
                     </div>
                 </div> 
