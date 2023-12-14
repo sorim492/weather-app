@@ -36,7 +36,7 @@ export default function Weather() {
 
   function convertToFahrenheit(event) {
     event.preventDefault();
-    let fTemperature = (weather.temperature * 9) / 5 + 32;
+    let fTemperature = (temperature * 9) / 5 + 32;
     return setTemperature(Math.round(fTemperature));
   }
 
@@ -64,7 +64,7 @@ export default function Weather() {
                         <div className="city">
                             <h3>City: {weather.city}</h3>
                             <h4>Country: {weather.country}</h4>
-                            <h4>Description: {weather.description}</h4>
+                            <h4 className="text-capitalize">Description: {weather.description}</h4>
                         </div>
                     </div>
                 </div> 
@@ -75,7 +75,7 @@ export default function Weather() {
                         <span className="data">
                             <img src={weather.icon} alt={weather.description} />
                             <br/>
-                            <h2>{Math.round(temperature)}</h2>
+                            <h2>{Math.round(weather.temperature)}</h2>
                             <a href="/" onClick={convertToCelsius} className="active">
                                 {" "}
                                 °C |
