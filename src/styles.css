@@ -112,6 +112,10 @@ footer {
   font-weight: 200;
 }
 
+.weatherTemp a{
+  text-decoration: none;
+}
+
 /* Dark theme */
 .dark {
   background-color: #455d7a;
