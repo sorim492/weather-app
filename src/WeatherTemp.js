@@ -13,6 +13,8 @@ export default function WeatherTemp(props){
         setUnit("celsius");
     }
     let faherenheit = (props.celsius * 9) / 5 + 32;
+    let feelsFaherenheit = (props.feel * 9) / 5 + 32;
+    let wmph = (props.wind * 0.621);
 
     if (unit==="celsius"){
     return(
@@ -26,6 +28,8 @@ export default function WeatherTemp(props){
                 {" "}
                 ºF
             </a>
+            <h4>Feels like: {Math.round(props.feel)} °C</h4>
+            <h4>Wind: {props.wind} km/hr</h4>
         </div>
     )
     } else {
@@ -39,7 +43,9 @@ export default function WeatherTemp(props){
             <a href="/" onClick={showCelsius}>
                 {" "}
                °C 
-            </a>                          
+            </a>
+            <h4>Feels like: {Math.round(feelsFaherenheit)} °F</h4>
+            <h4>Wind: {Math.round(wmph)} mph</h4>
         </div>
         )
     }

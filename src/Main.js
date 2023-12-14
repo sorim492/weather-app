@@ -28,11 +28,10 @@ function Main(props) {
                         <span className="data">
                             <img src={props.data.icon} alt={props.data.description} />
                             <br/>
-                            <WeatherTemp celsius={props.data.temperature}/>
-                            
-                            <h4>Feels like: {Math.round(props.data.feels)} °C</h4>
-                            <h4>Humidity: {props.data.humidity} %</h4>
-                            <h4>Wind: {props.data.wind} km/hr</h4>
+                            <WeatherTemp celsius={props.data.temperature}
+                            feel={props.data.feels}
+                            wind={props.data.wind}/>
+                            <h4>Humidity: {props.data.humidity}%</h4>
                         </span>
                     </div>
                 </div>
