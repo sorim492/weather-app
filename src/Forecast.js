@@ -19,7 +19,7 @@ export default function Forecast(props) {
 
   return (
     <div className="forecast">
-      <div className="container">
+
         <div className="card">
           <div className="card-body">
             <h2>Forecast</h2>
@@ -61,7 +61,7 @@ export default function Forecast(props) {
             </div>
             </div>
           </div>
-        </div>
+
       </div>
     </div>
   );
