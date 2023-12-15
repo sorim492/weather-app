@@ -36,20 +36,12 @@ export default function Current(){
                 <div className="container">
                     <div className="row">
                         <div className="col-6"> 
-                        <div className="card">
-                        <div className="card-body">   
-                            <h2>{cWeather.city}</h2>
-                         </div>
-                         </div>
+                            <h2 className="weather-city">{cWeather.city}</h2>
                         </div>
-                        <div className="col-6">  
-                        <div className="card">
-                        <div className="card-body"> 
+                        <div className="col-6">      
                         <span>  
-                            <h4>Temp: {Math.round(cWeather.temp)}°C</h4>
+                            <h4 className="weather-city">Temperature: {Math.round(cWeather.temp)}°C</h4>
                         </span>
-                        </div>
-                        </div>
                         </div>
                     </div>
                 </div>
