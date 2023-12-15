@@ -9,6 +9,7 @@ export default function Current(){
         setcWeather({
             ready: true,
             temp: response.data.main.temp,
+            city: response.data.name,
         })
     }
 
@@ -26,14 +27,40 @@ export default function Current(){
         navigator.geolocation.getCurrentPosition(showPosition);
     }
 
+    if(cWeather.ready){
     return(
         <div>
             <div className="currentButton">
                 <button onClick={currentButton}>Current Location</button>
                 <br/>
-                <h4>Temp: {Math.round(cWeather.temp)}</h4>
-             </div>
-            
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6"> 
+                        <div className="card">
+                        <div className="card-body">   
+                            <h2>{cWeather.city}</h2>
+                         </div>
+                         </div>
+                        </div>
+                        <div className="col-6">  
+                        <div className="card">
+                        <div className="card-body"> 
+                        <span>  
+                            <h4>Temp: {Math.round(cWeather.temp)}°C</h4>
+                        </span>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
+}else{
+    return(
+        <div className="currentButton">
+            <button onClick={currentButton}>Current Location</button>
+        </div>
+    )
+}
 }
