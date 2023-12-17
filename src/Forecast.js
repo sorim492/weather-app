@@ -7,7 +7,7 @@ let [loaded,setloaded] = useState(false);
 let [forecast, setForecast] = useState();
 
   function showForecast(response){
-    console.log(response.data)
+
     setloaded(true);
     setForecast(
      response.data.daily,
@@ -31,10 +31,6 @@ if (loaded){
         );
         } else{ return null;}
         })}
-     
-      
-      
-      
       </div>
     </div>
 
@@ -42,7 +38,6 @@ if (loaded){
 </div>
 );
 } else{  
-
   let lon = props.coord.lon;
   let lat = props.coord.lat;
   let units = "metric"
