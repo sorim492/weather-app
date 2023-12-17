@@ -22,9 +22,16 @@ if (loaded){
     <div className="card-body">
       <h2>Forecast</h2>
       <div className="row">
-      <div className="col">
-      <WeatherForecastDaily data={forecast[0]}/>
-      </div>
+        {forecast.map(function (dailyForecast,index){
+        if(index < 5){
+        return(
+          <div className="col" key={index}>
+          <WeatherForecastDaily data={dailyForecast}/>
+          </div>
+        );
+        } else{ return null;}
+        })}
+     
       
       
       
