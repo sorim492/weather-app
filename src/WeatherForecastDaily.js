@@ -8,7 +8,6 @@ export default function WheatherForecastDaily(props){
         
         return day;
     }
-    console.log(props.data.weather[0].main)
 
     return(
     <div>
